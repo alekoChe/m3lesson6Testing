@@ -40,10 +40,12 @@ public class ArraysTransformator {
                 resultArray[i] = inputArray[inputArray.length - resultArray.length + i];
             }
         }
+        /////////////////////////////////////////////////////////
         for (int i = 0; i < resultArray.length; i++) {
             System.out.print(resultArray[i] + ", ");
         }
         System.out.println();
+        ////////////////////////////////////////////////////////
         return resultArray;
     }
 
