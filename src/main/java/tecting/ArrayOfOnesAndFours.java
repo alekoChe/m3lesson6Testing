@@ -13,7 +13,7 @@ public class ArrayOfOnesAndFours {
         final int[] inputArray4 = new int[]{1, 4, 1, 4, 5};
 
         ArrayOfOnesAndFours oOF = new ArrayOfOnesAndFours();
-        
+
         System.out.println(oOF.checkIsOnly1And4InArray(inputArray1));
         System.out.println(oOF.checkIsOnly1And4InArray(inputArray2));
         System.out.println(oOF.checkIsOnly1And4InArray(inputArray3));
