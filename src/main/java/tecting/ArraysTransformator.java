@@ -40,23 +40,19 @@ public class ArraysTransformator {
                 resultArray[i] = inputArray[inputArray.length - resultArray.length + i];
             }
         }
+        /////////////////////////////////////////////////////////
         for (int i = 0; i < resultArray.length; i++) {
             System.out.print(resultArray[i] + ", ");
         }
         System.out.println();
+        ////////////////////////////////////////////////////////
         return resultArray;
     }
 
     public boolean detectionIs4(int[] inputArray) {
         /** определяем наличие четверок в массиве */
-        int counter4 = 0;
-        for (int i = 0; i < inputArray.length; i++) {
-            if (inputArray[i] == 4) {
-                counter4 += 1;
-                break;
-            }
-        }
-        return (counter4 > 0);
+        List<Integer> listArr = Arrays.stream(inputArray).boxed().collect(Collectors.toList());
+        return listArr.contains(4);
     }
 
     public int detectAmountNumbersAfter4(int[] inputArray) {

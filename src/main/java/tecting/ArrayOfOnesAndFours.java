@@ -6,12 +6,18 @@ import java.util.List;
 
 public class ArrayOfOnesAndFours {
 
-    private int[] inputArray;
-
     public static void main(String[] args) {
-        ArrayOfOnesAndFours oAF = new ArrayOfOnesAndFours();
-        oAF.inputArray =new int[] {1, 1, 1};
-        System.out.println(oAF.checkIsOnly1And4InArray(oAF.inputArray));
+        final int[] inputArray1 = new int[]{1, 1, 1};
+        final int[] inputArray2 = new int[]{4};
+        final int[] inputArray3 = new int[]{1, 4, 1};
+        final int[] inputArray4 = new int[]{1, 4, 1, 4, 5};
+
+        ArrayOfOnesAndFours oOF = new ArrayOfOnesAndFours();
+
+        System.out.println(oOF.checkIsOnly1And4InArray(inputArray1));
+        System.out.println(oOF.checkIsOnly1And4InArray(inputArray2));
+        System.out.println(oOF.checkIsOnly1And4InArray(inputArray3));
+        System.out.println(oOF.checkIsOnly1And4InArray(inputArray4));
     }
 
     public boolean checkIsOnly1And4InArray(int[] inputArray) {
@@ -19,7 +25,7 @@ public class ArrayOfOnesAndFours {
         boolean otherNumbers = false;
         boolean is1 = false;
         boolean is4 = false;
-        for (int i = 0; i <  inputArray.length; i++) {
+        for (int i = 0; i < inputArray.length; i++) {
             if (inputArray[i] != 1 && inputArray[i] != 4) {
                 otherNumbers = true;
                 break;
@@ -35,21 +41,5 @@ public class ArrayOfOnesAndFours {
             numbersAreOnly1And4 = true;
         }
         return numbersAreOnly1And4;
-    }
-    public boolean detectionIsOneInArray(int[] inputArray) {
-        boolean is1 = false;
-        List intList = new ArrayList<>(Arrays.asList(inputArray));
-        if (intList.contains(1)) {
-            is1 = true;
-        }
-        return is1;
-    }
-    public boolean detectionIsFourInArray(int[] inputArray) {
-        boolean is4 = false;
-        List intList = new ArrayList<>(Arrays.asList(inputArray));
-        if (intList.contains(4)) {
-            is4 = true;
-        }
-        return is4;
     }
 }
